@@ -20,18 +20,112 @@
 </style>
 
 <body>
-  
-  <img src="https://cdn.dribbble.com/userupload/3357670/file/original-2d6e1c42b7ef26d24fb57879d6b0ae79.png?resize=400x0" alt="Sneaker Hub Logo">
-  <h1>Sneaker Hub SG</h1>
+
   <nav>
       <ul>
         <div>
                 <div class="btn-group">
-                    <button onclick="window.location.href='mens.html';">Men's</button>
-                    <button onclick="window.location.href='womens.html';">Women's</button>
-                    <button onclick="window.location.href='newrelease.html';">New Releases</button>
-                    <button onclick="window.location.href='more.html';">Shop More</button>
-                    <button onclick="window.location.href='about.html';">About Us</button>
+                    <title>My Website</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+                    <style>
+                      body {
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                      }
+                  
+                      .header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 25px;
+                      }
+                  
+                      .header h1 {
+                        font-size: 36px;
+                        margin: 0;
+                        font-weight: 600;
+                      }
+                  
+                      .header ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                      }
+                  
+                      .header li {
+                        margin-right: 25px;
+                        position: relative;
+                      }
+                  
+                      .header a {
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: black;
+                        padding: 10px 20px;
+                        display: block;
+                        position:relative;
+                      }
+                  
+                      .header a::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background-color: black;
+                        transform: scaleX(0);
+                        transition: transform 275ms ease-in-out;
+                      }
+                  
+                      .header a:hover::after {
+                        transform: scaleX(1);
+                      }
+                  
+                      .header ul ul {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        min-width: 200px;
+                      }
+                  
+                      .header ul li:hover > ul {
+                        display: block;
+                      }
+                  
+                      .header ul ul ul {
+                        left: 100%;
+                        top: 0;
+                      }
+                  
+                      .header ul ul li {
+                        float: none;
+                      }
+                      
+                    </style>
+                  </head>
+                  <body>
+                    <div class="header">
+                      <h1>Sneaker Hub</h1>
+                      <img src="https://cdn.dribbble.com/userupload/3357670/file/original-2d6e1c42b7ef26d24fb57879d6b0ae79.png?resize=400x0" alt="Sneaker Hub Logo">
+                      <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html">Shop</a>
+                          <ul>
+                            <li><a href="mens.html">Men's</a></li>
+                            <li><a href="womens.html">Women's</a></li>
+                            <li><a href="newrelease.html">New Releases</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="about.html">About</a>
+                        <ul>
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </ul>
                   </div>
             </div>
         </div>
@@ -40,10 +134,9 @@
     
     <section id="featured">
       <div class="featured">
-      <img src="https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Black-Phantom-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1671732011" alt="Featured Product">
+        <button5 onclick="window.location.href='phantom.html';"><img src="https://images.stockx.com/images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Black-Phantom-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1671732011" alt="Featured Product"></button5>
     </div>
-      <h2>Featured Product: Travis Scott x Air Jordan 1 Low "Black Phantom"</h2>
-      <button onclick="window.location.href='phantom.html';">Shop Now</button>
+      <p>Featured Product: Travis Scott x Air Jordan 1 Low "Black Phantom"</p> 
       <h1>New Releases</h1>
       <p>Check out the latest sneakers to hit the market.
     <div class="btn-group">
@@ -102,6 +195,10 @@
   display: inline;
 }
 
+.button5 button:hover{
+  cursor:pointer;
+}
+
     .btn-group button:hover{
         background-color: blanchedalmond;
         text-decoration: underline;
@@ -119,12 +216,17 @@
       img {
         width: 330px;
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
         display: inline;
       }
 
       .featured{
-        width: 330px
+        width: 350px;
+        margin: 30px;
+        text-align: center;
+        box-shadow: 0px 0px 10px #ccc;
+        border-radius: 10px;
+        overflow: hidden;
       }
 
       button{
